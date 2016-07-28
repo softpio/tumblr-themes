@@ -1,0 +1,447 @@
+<html>
+<head>
+
+<title>{Title}</title>
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+{block:Description}
+<meta name="description" content="{MetaDescription}" />
+{/block:Description}
+
+<link href="https://fonts.googleapis.com/css?family=Asap:400,400i,700,700i|Droid+Sans:400,700|Inconsolata:400,700|Karla:400,400i,700,700i|Roboto+Condensed:400,400i,700,700i" rel="stylesheet">
+
+<script src="http://static.tumblr.com/5b8epgj/hmNoaui1q/smoothscroll.js"></script>
+
+<meta name="text:second description" content="xxx"/>
+<meta name="text:second title" content="xxx"/>
+
+</head>
+    
+<style type="text/css">
+ 
+iframe.tmblr-iframe.tmblr-iframe--desktop-loggedin-controls.iframe-controls--desktop, .tmblr-iframe {
+    position:fixed;
+    white-space:nowrap;
+    -webkit-filter: invert(100%);
+    -moz-filter: invert(100%);
+    -o-filter: invert(100%);
+    -ms-filter: invert(100%);
+    filter: invert(100%);
+    opacity:0;transition: .8s ease-in-out;
+    -webkit-transition: .8s ease-in-out;
+    -moz-transition: .8s ease-in-out;
+    -o-transition: .8s ease-in-out;
+}
+
+iframe.tmblr-iframe.tmblr-iframe--desktop-loggedin-controls.iframe-controls--desktop, .tmblr-iframe:hover {
+    opacity:0.5;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #bdad91;
+  border-top: 15px solid #fff;
+  border-bottom: 15px solid #fff;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #bdad91;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #bdad91;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+  border: 0px none #ffffff;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #ffffff;
+}
+::-webkit-scrollbar-track:active {
+  background: #ffffff;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+ 
+body {
+    background-color:{color:background};
+    font-family:'karla', sans-serif;
+    font-size: 11px;
+    color:#000;
+}
+
+a { 
+    text-decoration:none;
+    color:#d4c6ae;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+}
+
+a:hover { 
+    color:#636363;
+}
+
+b, strong{
+    color:#000;
+}
+
+i,em{
+    color:#bdad91
+}
+
+italic
+
+blockquote {
+    padding:2px 7px;
+    margin:3px 0 3px 8px;
+    border-left:1px solid #006f94;
+}
+   
+blockquote img {     
+    max-width:100%;
+    height:auto;
+}
+
+img {
+     max-width: 100%;
+}
+
+h1 {
+    font-size:30px;
+    line-height:30px;
+    text-align:right;
+    padding:0px 8px 8px 10px;
+}
+
+h1 a{
+    color:#000;
+}
+
+h1 a:hover{
+    color:#bdad91;
+    letter-spacing:4px;
+}
+
+h2 {
+    font-size:12px
+    font-family:'inconsolata', monospace;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:#666;
+    text-align:right;
+}
+
+#container {
+    position:absolute;
+    left: calc(100% - 880px);
+    height:700px;
+    overflow-y:scroll;
+    width:538px;
+    bottom:40px;
+    border-top:1px solid #000;
+    border-bottom:1px solid #000;
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left:17px;
+}  
+
+.posts {
+    width:500px;
+    background-color:#ffffff;
+    padding:10px;
+    margin-bottom:35px;
+    opacity:0.8;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;    
+}
+
+.posts:hover {
+    opacity:1;
+    -webkit-filter:none;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    
+}
+
+.postsborder{
+    border-top: 1px solid #bdad91;
+    padding-bottom:10px;
+    width:500;
+}
+
+.permalinks { 
+    background-color:transparent;
+    padding:5px 1px;
+    height:12px; 
+    border-top:1px solid #bdad91;
+    margin-top:10px;
+}
+
+.permalinks a { 
+    text-decoration:none;
+    font-size: 9px;
+    color:#f2992e;
+}
+ 
+.permalinks a:hover { 
+    color:#636363;
+} 
+
+.date {
+    float:left;
+} 
+
+.date a{
+    color:#494949;
+}
+
+.reblogs {
+    float:right;
+}
+
+.reblogs a{
+    color:#494949;
+}
+    
+.tags { 
+    text-align:center;
+}
+
+.tags a { 
+    text-decoration:none;
+    font-size: 8px;
+    text-transform:lowercase;
+    color:#d4c6ae;
+}
+
+.tags a:hover { 
+    color:#000;
+    letter-spacing:1px;
+}
+
+#sidebar {
+    position:fixed;
+    right: 0px;
+    top:300px;
+    height:350px; 
+    width:200px;
+    padding: 0px 95px 0px 0px;
+    background:transparent;
+    background-position: bottom left;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+
+#description {
+    font-size:10px;
+    color:#000;
+    text-align:right;
+    padding:0px 10px;
+}
+
+#description a{
+    color:#000;
+}
+
+#sideimage img {
+    max-width:250px;
+    margin-left:10px;
+}
+
+#links {
+    font-size:10px;
+    padding:20px 9px 20px 0px;
+    text-align:right;
+}
+
+#links a {
+    font-family:'inconsolata', monospace;
+    display:inline-block;
+    line-height:14px;
+    color:#767272;
+    padding-left:10px;
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+}
+
+#links a:hover {
+    color:#bdad91;
+    letter-spacing:1px;
+}
+
+#pagination {
+    float:right;
+    padding: 20px 10px 10px 10px;
+}
+
+#pagination a {
+    color:#d4c6ae;
+    font-size:10px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+#pagination a:hover {
+    color:#dddddd;
+}
+
+.asker {
+    font-size:10px;
+    font-style: italic;
+    text-align:left;
+    border-bottom:1px solid #eee;
+    margin-bottom:5px;
+    padding-bottom:3px;
+}
+
+.question {
+    font-style: italic,bold;
+    padding-left:50px;
+    padding-right:50px;
+}
+
+.quote {
+    font-size:13px;
+    letter-spacing:1px;
+    text-align:center;
+    border-bottom:1px solid #eee;
+    margin-bottom:5px;
+    padding-bottom:3px;
+}
+
+.quotesource {
+    font-size:10px;
+    letter-spacing:1px;
+    text-align:center;
+    margin-bottom:5px;
+}
+
+</style>
+    
+<body>
+
+<!-- SCM Music Player http://scmplayer.net -->
+<script type="text/javascript" src="http://scmplayer.net/script.js" 
+data-config="{'skin':'http://static.tumblr.com/5b8epgj/znZoauq6p/skin.css','volume':50,'autoplay':false,'shuffle':true,'repeat':1,'placement':'top','showplaylist':false,'playlist':[{'title':'mayo + shin seunghun, beenzino','url':'https://www.youtube.com/watch?v=RM2MXolCzZY'},{'title':'love talk + kisum','url':'https://www.youtube.com/watch?v=YGWCd6-kKD4'},{'title':'blue + samuel seo','url':'https://www.youtube.com/watch?v=0LCT1HU0KPI'},{'title':'lips warm like coffee + eddy kim','url':'https://www.youtube.com/watch?v=FjWMQyZXm20'},{'title':'%u751C%u871C%u871C + hyukoh','url':'https://www.youtube.com/watch?v=-JUTz0iYisM'},{'title':'isn%27t she lovely + hyukoh','url':'https://www.youtube.com/watch?v=bEq_HIQF3XY'},{'title':'oo ah + crush','url':'https://www.youtube.com/watch?v=6CM5iC_isug'},{'title':'solo + jay park','url':'https://www.youtube.com/watch?v=4POUDVKNXVI'},{'title':'f.w.b. + elo','url':'https://www.youtube.com/watch?v=6KEYlPWyc_4'},{'title':'your love + elo','url':'https://www.youtube.com/watch?v=aeMfkNaJF2Y'},{'title':'denim heather t-shirts + elo','url':'https://www.youtube.com/watch?v=INAtfzazs2I'},{'title':'baby oh baby + hoody','url':'https://www.youtube.com/watch?v=Sos6Dr3SU24'},{'title':'like you + hoody','url':'https://www.youtube.com/watch?v=JaSIPgnclCU'},{'title':'city + owen ovadoz','url':'https://www.youtube.com/watch?v=oJurpTMIs_8'},{'title':'mmm + owen ovadoz','url':'https://www.youtube.com/watch?v=SZRGcvEL44s'},{'title':'parachute + elo','url':'https://www.youtube.com/watch?v=Sp8kOtMEPGY'},{'title':'sting + stellar','url':'https://www.youtube.com/watch?v=54NyyS6_yos'},{'title':'drive thru + bloo','url':'https://www.youtube.com/watch?v=LNc8-O2NlBY'},{'title':'sleep tight + e sens','url':'https://soundcloud.com/esensofficial/sleep-tight'},{'title':'drunk blues + gyuyeong','url':'https://soundcloud.com/rbdud93/2-drunk-blues'},{'title':'late night + simba zawadi, kenny raw','url':'https://soundcloud.com/simbazawadi/01-late-night?in=simbazawadi/sets/simba-zawadi-kenny-raw-the-1'},{'title':'mind + offnoff','url':'https://soundcloud.com/offonoff/mind'},{'title':'insane + flik','url':'https://soundcloud.com/official_flik/insane'},{'title':'lunatic + flik','url':'https://soundcloud.com/official_flik/lunatic'},{'title':'at all + loki kang','url':'https://soundcloud.com/lokikang/at-all-loki'},{'title':'wake up + loki kang','url':'https://soundcloud.com/lokikang/wakeup'},{'title':'birthday + punchnello','url':'https://soundcloud.com/031_punchnello/birthday'}]}" ></script>
+<!-- SCM Music Player script end -->
+
+<div id="sidebar"> <!--SIDEBAR BEGIN-->
+<h1><a href="/">{Title}</a></h1>
+
+<div id="description"> <!-- DESCRIPTION BEGIN-->
+<p>{text:second description}</p>
+
+<!-- ONLINE COUNTER SCRIPT -->
+<script language="JavaScript">var fhs = document.createElement('script');var fhs_id = "5342094";
+var ref = (''+document.referrer+'');var pn =  window.location;var w_h = window.screen.width + " x " + window.screen.height;
+fhs.src = "//s1.freehostedscripts.net/ocounter.php?site="+fhs_id+"&e1=<b>flower</b>&e2=<b>flowers</b>&r="+ref+"&m=0&wh="+w_h+"&a=1&pn="+pn+"";
+document.head.appendChild(fhs);document.write("<span id='o_"+fhs_id+"'></span>");
+</script>&nbsp;º
+<!-- ONLINE COUNTER SCRIPT END -->
+
+</div> <!--DESCRIPTION END -->
+
+<div id="links">
+<a href="/">home</a>&nbsp;&nbsp;º<br>
+<a href="/ask">ask</a>&nbsp;&nbsp;º<br> 
+<a href="/abt">abt</a>&nbsp;&nbsp;º<br> 
+<a href="/nav">nav</a>&nbsp;&nbsp;º<br> 
+<a href="/archive">past</a>&nbsp;&nbsp;º<br> 
+</div> 
+
+<div id="pagination">{block:Pagination}
+{block:PreviousPage}<a href="{PreviousPage}">返回</a>{/block:PreviousPage} &nbsp;+&nbsp;{block:NextPage}<a href="{NextPage}">前進</a>
+{/block:NextPage}
+{/block:Pagination}
+</div>
+
+</div> <!-- SIDEBAR END-->
+
+<div id="container">   
+
+{block:Posts}
+
+<div class="posts">
+<!-- POST TOP BORDER
+<div class="postsborder"></div> 
+
+-->
+
+
+{block:Text}{block:Title}{Title}{/block:Title}{Body}{/block:Text}
+
+{block:Photo}<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>{block:Caption}{block:PermalinkPage}{Caption}{/block:PermalinkPage}{/block:Caption}{/block:Photo}
+
+{block:Panorama}{LinkOpenTag}<img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>{LinkCloseTag}{block:Caption}{block:PermalinkPage}{Caption}{/block:PermalinkPage}{/block:Caption}{/block:Panorama}
+
+{block:Photoset}{Photoset-500}{block:Caption}{block:PermalinkPage}{Caption}{/block:PermalinkPage}{/block:Caption}{/block:Photoset}
+
+{block:Quote}<div class="quote">{Quote}</div>{block:Source}<div class="quotesource">{Source}</div>{/block:Source}{/block:Quote}
+
+{block:Link}<a href="{URL}" class="link" {Target}>{Name}</a>{block:Description}{Description}{/block:Description}{/block:Link}
+
+{block:Chat}{block:Title}{Title}</a>{/block:Title}
+{block:Lines}<li>{block:Label}{Label}{/block:Label}{Line}</li>{/block:Lines}{/block:Chat}
+                        
+{block:Video}{Video-500}{block:Caption}{block:PermalinkPage}{Caption}{/block:PermalinkPage}{/block:Caption}{/block:Video}
+
+{block:Audio}{AudioEmbed}{block:Caption}{block:PermalinkPage}{Caption}{/block:PermalinkPage}{/block:Caption}{/block:Audio}
+
+{block:Answer} 
+<div class="asker">{Asker}</div>
+<div class="question">{Question}</div>
+{Answer}
+{/block:Answer}
+
+<div class="permalinks"> <!--PERMALINKS START -->
+
+<div class="date">
+<b>
+<a href="{Permalink}">+&nbsp;{block:NoteCount}{NoteCount}{/block:NoteCount}</a>&nbsp;&nbsp;&nbsp;
+<a href="{Permalink}">(x)</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+</b>
+
+{block:PermalinkPage}
+{block:HasTags}{block:Tags}<a href="{TagUrl}"><i>#{Tag}&nbsp;&nbsp;&nbsp;&nbsp;</i></a>{/block:Tags}{/block:HasTags}
+{/block:PermalinkPage}
+
+</div>
+
+<div class="reblogs">
+<b>
+<a href="{ReblogURL}">:re</a>
+</b>
+</div>
+
+</div> <!--PERMALINKS END -->
+ 
+</div>
+ 
+{/block:Posts}
+
+</div>
+
+{block:ContentSource}
+<!-- {SourceURL}{block:SourceLogo}<img src="{BlackLogoURL}"
+width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
+{/block:SourceLogo}
+{block:NoSourceLogo}{SourceLink}{/block:NoSourceLogo} -->
+{/block:ContentSource}
+</body>
+</html>
